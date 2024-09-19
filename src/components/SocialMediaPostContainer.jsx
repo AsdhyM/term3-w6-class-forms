@@ -47,7 +47,8 @@ export default class SocialMediaPostContainer extends React.Component {
                         lastUpdated={this.state.lastUpdated}
                         location={this.state.location}
                         content={this.state.content}
-
+                        updateData={this.updatedPostData}
+                        
                         parentState={this.state}
                     />
                 </>

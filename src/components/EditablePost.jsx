@@ -30,32 +30,34 @@ export default class EditablePost extends React.Component {
                 {/* Editable author field */}
                 <label htmlFor="authorField">Author: </label>
                 <input 
-                type="text" 
-                name="authorField" 
-                id="authorField" 
-                value={this.state.author}
-                onChange={this.handleAuthorChange}
+                    type="text" 
+                    name="authorField" 
+                    id="authorField" 
+                    value={this.state.author}
+                    onChange={this.handleAuthorChange}
                 />
                 {/* Editable location field */}
                 <label htmlFor="locationField">Location: </label>
                 <input 
-                type="text" 
-                name="locationField" 
-                id="locationField" 
-                value={this.state.location} 
-                onChange={this.handleLocationChange}
+                    type="text" 
+                    name="locationField" 
+                    id="locationField" 
+                    value={this.state.location} 
+                    onChange={this.handleLocationChange}
                 />
                 {/* Editable content field */}
                 <label htmlFor="contentField">Post content: </label>
                 <input 
-                type="text" 
-                name="contentField" 
-                id="contentField" 
-                value={this.state.content} 
-                onChange={this.handleContentChange}
+                    type="text" 
+                    name="contentField" 
+                    id="contentField" 
+                    value={this.state.content} 
+                    onChange={this.handleContentChange}
                 />
 
-                <button onClick={this.props.updateDate}>
+                <button onClick={() => {
+                    this.props.updateData(this.state.author, this.state.location, this.state.content);
+                }}>
                     Submit Data 
                 </button>
             </div>
