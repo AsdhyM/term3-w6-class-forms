@@ -15,6 +15,14 @@ export default class EditablePost extends React.Component {
         this.setState({author:event.target.value});
     }
 
+    handleLocationChange = (event) => {
+        this.setState({location: event.target.value});
+    }
+
+    handleContentChange = (event) => {
+        this.setState({content: event.target.value});
+    }
+
 
     render(){
         return(
@@ -46,6 +54,10 @@ export default class EditablePost extends React.Component {
                 value={this.state.content} 
                 onChange={this.handleContentChange}
                 />
+
+                <button onClick={this.props.updateDate}>
+                    Submit Data 
+                </button>
             </div>
         )
     }
